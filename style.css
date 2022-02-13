@@ -110,3 +110,46 @@ h3{
   pointer-events: all;
   opacity: 1;
 }
+
+@media screen and (min-width: 200px){
+  .gameGrid img{
+    width: 16vw;
+    height: 8vh;
+  }
+
+  p{
+    font-size: 1.5rem;
+  }
+
+  .vite{
+    font-size: 1rem;
+  }
+}
+
+
+/* For medium devices */
+@media screen and (min-width: 568px) {
+  .vite{
+    font-size: 1rem;
+  }
+  .gameGrid img{
+    width: 18vw;
+    height: 14vh;
+  } 
+}
+
+/* For Large devices */
+@media screen and (max-width: 1024px) {
+  .gameGrid img{
+    width: 17vw;
+    height: 17vh;
+  } 
+}
+
+/* For Large devices */
+@media screen and (min-width: 1025px) {
+  .gameGrid img{
+    width: 13vw;
+    height: 17vh;
+  } 
+}
