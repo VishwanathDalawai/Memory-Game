@@ -20,7 +20,7 @@ function addCards() {
   let cardList = [];
   while (length < cardsInGame) {
     cardList.push({
-      img: `img/${length + 1}.jpg`,
+      img: `./img/${length + 1}.jpg`,
       // img: `https://source.unsplash.com/random/200x200?sig=${length}`,
       id: Math.random()
     })
