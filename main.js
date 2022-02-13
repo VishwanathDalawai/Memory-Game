@@ -37,7 +37,7 @@ function addCards() {
 function initiateBoard(cards) {
   for (let i = 0; i < cards.length; i++) {
     var card = document.createElement('img');
-    card.setAttribute('src', './favicon.svg');
+    card.setAttribute('src', './img/favicon.svg');
     card.setAttribute('data-id', i);
     card.addEventListener('click', flipCard);
     grid.appendChild(card);
@@ -53,13 +53,13 @@ function checkForMatch() {
     found.textContent = `${++foundCards}/${cardsInGame}`;
     animateCard(cards[firstCard]);
     animateCard(cards[secondCard]);
-    cards[firstCard].setAttribute('src', 'blank.jpg')
-    cards[secondCard].setAttribute('src', 'blank.jpg')
+    cards[firstCard].setAttribute('src', './img/blank.jpg')
+    cards[secondCard].setAttribute('src', './img/blank.jpg')
   } else {
     animateCard(cards[firstCard]);
     animateCard(cards[secondCard]);
-    cards[firstCard].setAttribute('src', 'favicon.svg')
-    cards[secondCard].setAttribute('src', 'favicon.svg')
+    cards[firstCard].setAttribute('src', './img/favicon.svg')
+    cards[secondCard].setAttribute('src', './img/favicon.svg')
   }
   choosenCards = [];
   choosenCardsIds = [];
@@ -86,10 +86,10 @@ function flipCard() {
     if (choosenCardsIds.length > 0 && choosenCardsIds[0] === cardId) {
       var firstCard = choosenCardsIds[0];
       animateCard(this);
-      imgs[firstCard].setAttribute('src', 'favicon.svg')
+      imgs[firstCard].setAttribute('src', './img/favicon.svg')
       choosenCards = [];
       choosenCardsIds = [];
-    } else if (this.getAttribute('src') != 'blank.jpg') {
+    } else if (this.getAttribute('src') != './img/blank.jpg') {
       document.getElementById('card-flip').play();
       choosenCards.push(cards[cardId].id);
       choosenCardsIds.push(cardId);
@@ -116,7 +116,7 @@ const glanceBoard = async () => {
   for (let i = 0; i < cards.length; i++) {
     const image = imgs[i];
     animateCard(image);
-    image.setAttribute('src', './favicon.svg');
+    image.setAttribute('src', './img/favicon.svg');
   }
   loading.classList.remove('loading');
 }
