@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  color: black;
+  font-size: 1.8em;
+  font-weight: 400;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+h3{
+  margin-top: 0;
+}
+
+.container{
+  margin: 0 auto;
+}
+
+.gameGrid{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border: 2px solid black;
+  gap: 0.1em;
+  justify-items: center;
+  padding: 10px;
+}
+
+.gameGrid img{
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 13vw;
+  height: 18vh;
+}
+
+.vite{
+  /* position: fixed; */
+  bottom: 0;
+  font-size: 1vw;
+  right: -3em;
+}
+
+.loading {
+  cursor: wait; /* busy cursor feedback */
+}
+
+.loading * {
+  /* disable all mouse events on subElements */
+  pointer-events: none; 
+}
+
+/* Modal */
+.modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: #ffffff;
+  width: 500px;
+  max-width: 80%;
+}
+
+.modal.active{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header{
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title{
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header #close-button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body{
+  padding: 10px 15px;
+}
+
+#overlay{
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active{
+  pointer-events: all;
+  opacity: 1;
+}

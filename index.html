@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div class="container loader">
+    <h3 class="heading">Memory Game</h3>
+    <div class="gameGrid">
+    </div>
+    <p>Attempts: <span class="attempts"></span> Found: <span class="found"></span></p>
+    <p class="vite">
+      Have choosen this card for the love on <a href="https://vitejs.dev/">Vite</a> for its lightning server start
+    </p>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title">Congratulations..!</div>
+        <button id="close-button">&times;</button>
+      </div>
+    <div class="modal-body">
+      <h4>Attempts: <span class="attempts-modal"></span></h4>
+      <p>Please refresh the page to play again..!</p>
+    </div>
+    </div>
+  </div>
+  <div id="overlay"></div>
+  <audio src="open-close.mp3" id="card-flip"></audio>
+  <audio src="celebrate.mp3" id="celebrate"></audio>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
